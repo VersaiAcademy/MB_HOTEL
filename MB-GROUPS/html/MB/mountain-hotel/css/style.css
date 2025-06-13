@@ -69,6 +69,11 @@ body {
     overflow-x: hidden !important;
     background: #f5eee7;
 }
+h2{
+    background: linear-gradient(to right, #ff6600, #ff3300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 p {
     font-family: 'Outfit', sans-serif;
