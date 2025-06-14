@@ -15,6 +15,7 @@
 
 <body>
     <!-- Preloader -->
+        <!-- Preloader -->
     <div class="preloader-bg"></div>
     <div id="preloader">
         <div id="preloader-status">
@@ -28,45 +29,47 @@
         </svg>
     </div>
     <!-- Navbar -->
+    <div id="mobileMenu" class="mobile-slider">
+        <button class="close-btn" onclick="closeMobileMenu()">&times;</button>
+        <ul class="mobile-nav">
+            <li><a href="../../../../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="restaurant.html">Our Hotels</a></li>
+            <li><a href="room-details.html">Room Details</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button class="btn-book" onclick="openBookingForm()">Book Your Stay</button></li>
+        </ul>
+    </div>
+
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <!-- Logo -->
             <div class="logo-wrapper">
-                <a class="logo" href="../../../../index.html"> <img src="img/logo-light.png" class="logo-img" alt=""> </a>
-                <!-- <a class="logo" href="index.html"> <h2>THE CAPPA <span>Mountain Hotel</span></h2> </a> -->
+                <a class="logo" href="../../../../index.html">
+                    <img src="img/logo-light.png" class="logo-img" alt="Logo">
+                </a>
             </div>
-            <!-- Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
-                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
-                    class="navbar-toggler-icon"><i class="ti-menu"></i></span> </button>
-            <!-- Menu -->
-            <div class="collapse navbar-collapse" id="navbar">
+            <button class="navbar-toggler" type="button" onclick="openMobileMenu()">
+                <span class="navbar-toggler-icon"><i class="ti-menu"></i></span>
+            </button>
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbar">
                 <ul class="navbar-nav ms-auto">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="../../../../index.html">Home
-                                </i></a>
-
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="rooms.html">Rooms</a></li>
-                        <li class="nav-item"><a class="nav-link" href="restaurant.html">Our Hotels</a></li>
-
-                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="room-details.html">Room
-                                Details </a>
-
-
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li class="nav-item">
-                            <button class="nav-link btn btn-book" onclick="openBookingForm()">Book Your Stay</button>
-                        </li>
-                    </ul>
+                    <li class="nav-item"><a class="nav-link" href="../../../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="rooms.html">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="restaurant.html">Our Hotels</a></li>
+                    <li class="nav-item"><a class="nav-link" href="room-details.html">Room Details</a></li>
+                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <button class="nav-link btn btn-book" onclick="openBookingForm()">Book Your Stay</button>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-
     <div id="bookingModal" class="modal-overlay">
         <div class="modal-content glass">
             <span class="close-btn" onclick="closeBookingForm()">&times;</span>
