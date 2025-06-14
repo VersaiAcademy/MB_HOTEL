@@ -54,7 +54,9 @@
                         <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="room-details.html">Room
                                 Details </a>
 
+
                         </li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
 
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         <li class="nav-item">
@@ -228,52 +230,59 @@
                                 <h4>Hotel Booking Form</h4>
                             </div>
                             <div class="booking-inner clearfix">
-                                                                <form class="booking-form" id="bookingForm">
-                                    <h2>Book Your Stay</h2>
-
-                                    <label>Name *</label>
-                                    <input type="text" placeholder="Enter Your Full Name" required>
-
-                                    <label>Email Address *</label>
-                                    <input type="email" placeholder="name@gmail.com" required>
-
-                                    <label>Phone *</label>
-                                    <input type="tel" placeholder="9876543210" maxlength="10" required>
-
-                                    <label>Check-In Date *</label>
-                                    <input type="date" required>
-
-                                    <label>Check-Out Date *</label>
-                                    <input type="date" required>
-
-                                    <label>Number of Adults *</label>
-                                    <input type="number" min="1" placeholder="e.g. 2" required>
-
-                                    <label>Number of Kids *</label>
-                                    <input type="number" min="0" placeholder="e.g. 1" required>
-
-                                    <label>Room Preference *</label>
-                                    <select required>
-                                        <option value="">Select Room</option>
-                                        <option>Deluxe Room</option>
-                                        <option>Super Deluxe Room</option>
-                                    </select>
-
-                                    <label>No. of Rooms *</label>
-                                    <input type="number" min="1" required>
-
-                                    <label>Select Hotel *</label>
-                                    <select required>
-                                        <option value="">Choose Hotel</option>
-                                        <option>Hotel MB Rooms</option>
-                                        <option>hotel Mountain</option>
-                                        <option>Hotel My Stay</option>
-                                        <option>Hotel A-1</option>
-                                        <option>Hotel Millennium</option>
-                                        <option>Hotel Mount Villa</option>
-                                    </select>
-
-                                    <button type="submit">Submit Booking</button>
+                                <form action="rooms.html" class="form1 clearfix">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="input1_wrapper">
+                                                <label>Check in</label>
+                                                <div class="input1_inner">
+                                                    <input type="text" class="form-control input datepicker"
+                                                        placeholder="Check in">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="input1_wrapper">
+                                                <label>Check out</label>
+                                                <div class="input1_inner">
+                                                    <input type="text" class="form-control input datepicker"
+                                                        placeholder="Check out">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="select1_wrapper">
+                                                <label>Adults</label>
+                                                <div class="select1_inner">
+                                                    <select class="select2 select" style="width: 100%">
+                                                        <option value="0">Adults</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="select1_wrapper">
+                                                <label>Children</label>
+                                                <div class="select1_inner">
+                                                    <select class="select2 select" style="width: 100%">
+                                                        <option value="0">Children</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn-form1-submit mt-15">Check
+                                                Availability</button>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -304,12 +313,12 @@
                                 Gujarat. Nestled in the serene hills, our hotel offers a peaceful escape surrounded by
                                 nature’s beauty and luxury comfort.</p>
 
-                            <div class="footer-language"> <i class="lni ti-world"></i>
+                             <!-- <div class="footer-language"> <i class="lni ti-world"></i>
                                 <select onchange="location = this.value;">
                                     <option value="http://duruthemes.com/">English</option>
                                     <option value="http://duruthemes.com/">German</option>
                                 </select>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="col-md-3 offset-md-1">
@@ -319,8 +328,9 @@
                                 <li><a href="../../../../index.html">Home</a></li>
                                 <li><a href="rooms.html">Rooms & Suites</a></li>
                                 <li><a href="restaurant.html">Restaurant</a></li>
-                                <li><a href="spa-wellness.html">Spa & Wellness</a></li>
+                                <li><a href="spa-wellness.html"></a></li>
                                 <li><a href="about.html">About Hotel</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
@@ -334,7 +344,7 @@
                             </p>
                             <div class="footer-contact-info">
                                 <p class="footer-contact-phone"><span class="flaticon-call"></span> 86193
-                                    35086/9265677717 </p>
+                                    35086/92656 77717 </p>
                                 <p class="footer-contact-mail">mbgrouphotel@gmail.com </p>
                             </div>
                             <div class="footer-about-social-list"> <a href="#"><i class="ti-instagram"></i></a> <a
@@ -350,9 +360,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="footer-bottom-inner">
-                           MB Hotel Management Group<p class="footer-bottom-copy-right">© Copyright 2025 by <a href="#">MB Hotel Management Group</a></p>
-                        </div>
+                         <p class="footer-bottom-copy-right">
+  © 2025 <a href="#" style="text-decoration: none;">MB Hotel Management Group</a>. All rights reserved. 
+  Designed & Developed by <a href="https://versaitechnology.com/" style="text-decoration: none;">Versai Technology</a>
+</p>
                     </div>
                 </div>
             </div>

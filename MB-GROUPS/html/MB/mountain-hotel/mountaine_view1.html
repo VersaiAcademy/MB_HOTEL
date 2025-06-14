@@ -251,6 +251,7 @@
             <li><a href="rooms.html">Rooms</a></li>
             <li><a href="restaurant.html">Our Hotels</a></li>
             <li><a href="room-details.html">Room Details</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><button class="btn-book" onclick="openBookingForm()">Book Your Stay</button></li>
         </ul>
@@ -274,6 +275,7 @@
                     <li class="nav-item"><a class="nav-link active" href="rooms.html">Rooms</a></li>
                     <li class="nav-item"><a class="nav-link" href="restaurant.html">Our Hotels</a></li>
                     <li class="nav-item"><a class="nav-link" href="room-details.html">Room Details</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item">
                         <button class="nav-link btn btn-book" onclick="openBookingForm()">Book Your Stay</button>
@@ -362,6 +364,74 @@
                     <img src="img/rooms/Hotel-MY-stay.jpeg" alt="Mountain View Hotel Interior">
                 </div>
             </div>
+
+            
+            <style>
+     
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 1000px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 14px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    td a {
+    
+      text-decoration: none;
+    }
+
+    td a:hover {
+       text-decoration: none;
+    }
+    .table-center {
+     display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+</style>
+<div class="table-center">
+<table>
+  <thead>
+    <tr>
+      <th>Room Categories</th>
+      <th>Single Person</th>
+      <th>Double Person</th>
+      <th>Three Person</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#">Deluxe Room</a></td>
+      <td>1000+ GST</td>
+      <td>1200+ GST</td>
+      <td>1500+ GST</td>
+    </tr>
+    <!-- <tr>
+      <td><a href="#">Triple Room with Bathroom</a></td>
+      <td>-</td>
+      <td>-</td>
+      <td>1800 + GST</td>
+    </tr>
+    <tr>
+      <td><a href="#">Premium Suite With Jacuzzi</a></td>
+      <td>-</td>
+      <td>-</td>
+      <td>2000 + GST</td>
+    </tr> -->
+  </tbody>
+</table>
+</div>
 
             <!-- Facilities Cards -->
     <div class="row">
@@ -519,7 +589,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-12">
                             <div class="item">
-                                <div class="position-re o-hidden sizing"> <img src="img/clients/card_room45.jpeg" alt="">
+                                <div class="position-re o-hidden sizing"> <img src="img/stay-hotel-img/s4.jpg" alt="">
                                 </div> <span class="category"><a href="rooms.html">Book</a></span>
                                 <div class="con">
                                     <h6><a href="room-details.html">₹1000 + GST / Night</a></h6>
@@ -543,7 +613,7 @@
                         </div>
                         <div class="col-lg-6 col-md-12">
                             <div class="item">
-                                <div class="position-re o-hidden sizing"> <img src="img/clients/card_room46.jpeg" alt="">
+                                <div class="position-re o-hidden sizing"> <img src="img/stay-hotel-img/s3.jpg" alt="">
                                 </div> <span class="category"><a href="rooms.html">Book</a></span>
                                 <div class="con">
                                     <h6><a href="room-details.html">₹1200 + GST / Night</a></h6>
@@ -567,7 +637,7 @@
                         </div>
                         <div class="col-lg-6 col-md-12">
                             <div class="item">
-                                <div class="position-re o-hidden sizing"> <img src="img/clients/card_room48.jpeg" alt="">
+                                <div class="position-re o-hidden sizing"> <img src="img/stay-hotel-img/s9.jpg" alt="">
                                 </div> <span class="category"><a href="rooms.html">Book</a></span>
                                 <div class="con">
                                     <h6><a href="room-details.html">₹2000 + GST / Night</a></h6>
@@ -591,7 +661,7 @@
                         </div>
                         <div class="col-lg-6 col-md-12">
                             <div class="item">
-                                <div class="position-re o-hidden sizing"> <img src="img/clients/card_room47.jpeg" alt="">
+                                <div class="position-re o-hidden sizing"> <img src="img/stay-hotel-img/s10.jpg" alt="">
                                 </div> <span class="category"><a href="rooms.html">Book</a></span>
                                 <div class="con">
                                     <h6><a href="room-details.html">₹2400 + GST / Night</a></h6>
@@ -651,7 +721,7 @@
     <!-- Footer (same as original) -->
    <!-- <p class="footer-contact-phone"><span class="flaticon-call"></span><a href="tel:+91 86193
                                     35086">86193
-                                    35086</a> <a href="tel:+91 9265677717">/ 9265677717</a></p><footer class="footer"> -->
+                                    35086</a> <a href="tel:+91 92656 77717">/ 92656 77717</a></p><footer class="footer"> -->
         <div class="footer-top">
             <div class="container">
                 <div class="row">
@@ -662,12 +732,12 @@
                                 Gujarat. Nestled in the serene hills, our hotel offers a peaceful escape surrounded by
                                 nature’s beauty and luxury comfort.</p>
 
-                            <div class="footer-language"> <i class="lni ti-world"></i>
+                             <!-- <div class="footer-language"> <i class="lni ti-world"></i>
                                 <select onchange="location = this.value;">
                                     <option value="http://duruthemes.com/">English</option>
                                     <option value="http://duruthemes.com/">German</option>
                                 </select>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="col-md-3 offset-md-1">
@@ -677,8 +747,9 @@
                                 <li><a href="../../../../index.html">Home</a></li>
                                 <li><a href="rooms.html">Rooms & Suites</a></li>
                                 <li><a href="restaurant.html">Restaurant</a></li>
-                                <li><a href="spa-wellness.html">Spa & Wellness</a></li>
+                                <li><a href="spa-wellness.html"></a></li>
                                 <li><a href="about.html">About Hotel</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
@@ -693,7 +764,7 @@
                             <div class="footer-contact-info">
                                 <p class="footer-contact-phone"><span class="flaticon-call"></span><a href="tel:+91 86193
                                     35086">86193
-                                    35086</a> <a href="tel:+91 9265677717">/ 9265677717</a></p>
+                                    35086</a> <a href="tel:+91 92656 77717">/ 92656 77717</a></p>
                                 <p class="footer-contact-mail">mbgrouphotel@gmail.com </p>
                             </div>
                             <div class="footer-about-social-list"> <a href="#"><i class="ti-instagram"></i></a> <a
@@ -709,9 +780,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="footer-bottom-inner">
-                           MB Hotel Management Group<p class="footer-bottom-copy-right">© Copyright 2025 by <a href="#">MB Hotel Management Group</a></p>
-                        </div>
+                         <p class="footer-bottom-copy-right">
+  © 2025 <a href="#" style="text-decoration: none;">MB Hotel Management Group</a>. All rights reserved. 
+  Designed & Developed by <a href="https://versaitechnology.com/" style="text-decoration: none;">Versai Technology</a>
+</p>
                     </div>
                 </div>
             </div>
