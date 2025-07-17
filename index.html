@@ -420,19 +420,48 @@
    
 
     <!-- Mobile Slider Menu -->
-    <div id="mobileMenu" class="mobile-slider">
-        <button class="close-btn" onclick="closeMobileMenu()">&times;</button>
-        <ul class="mobile-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="/MB-GROUPS/html/MB/mountain-hotel/about.html">About</a></li>
-            <li><a href="/MB-GROUPS/html/MB/mountain-hotel/rooms.html">Rooms</a></li>
-            <li><a href="/MB-GROUPS/html/MB/mountain-hotel/restaurant.html">Our Hotels</a></li>
-            <li><a href="/MB-GROUPS/html/MB/mountain-hotel/room-details.html">Room Details</a></li>
-            <li><a href="/MB-GROUPS/html/MB/mountain-hotel/gallery.html">Gallery</a></li>
-            <li><a href="/MB-GROUPS/html/MB/mountain-hotel/contact.html">Contact</a></li>
-            <li><button class="btn-book" onclick="openBookingForm()">Book Your Stay</button></li>
-        </ul>
-    </div>
+   <div id="mobileMenu" class="mobile-slider">
+  <button class="close-btn" onclick="closeMobileMenu()">&times;</button>
+  <ul class="mobile-nav">
+    <li><a href="index.html">Home</a></li>
+
+    <!-- About with Dropdown -->
+    <li class="has-submenu">
+      <a href="#" onclick="toggleSubMenu(event)">About &#x25BC;</a>
+      <ul class="submenu">
+        <li><a href="/MB-GROUPS/html/MB/mountain-hotel/about.html">About Us</a></li>
+        <li><a href="/MB-GROUPS/html/MB/mountain-hotel/team1.html">Team</a></li>
+      </ul>
+    </li>
+
+    <li><a href="/MB-GROUPS/html/MB/mountain-hotel/rooms.html">Rooms</a></li>
+    <li><a href="/MB-GROUPS/html/MB/mountain-hotel/restaurant.html">Our Hotels</a></li>
+    <li><a href="/MB-GROUPS/html/MB/mountain-hotel/room-details.html">Room Details</a></li>
+    <li><a href="/MB-GROUPS/html/MB/mountain-hotel/gallery.html">Gallery</a></li>
+    <li><a href="/MB-GROUPS/html/MB/mountain-hotel/contact.html">Contact</a></li>
+    <li><button class="btn-book" onclick="openBookingForm()">Book Your Stay</button></li>
+  </ul>
+</div>
+<style>
+    .submenu {
+  display: none;
+  list-style: none;
+  padding-left: 15px;
+}
+
+.has-submenu.active .submenu {
+  display: block;
+}
+
+</style>
+<script>
+  function toggleSubMenu(event) {
+    event.preventDefault();
+    const li = event.target.closest('.has-submenu');
+    li.classList.toggle('active');
+  }
+</script>
+
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
@@ -446,20 +475,32 @@
             <button class="navbar-toggler" type="button" onclick="openMobileMenu()">
                 <span class="navbar-toggler-icon"><i class="ti-menu"></i></span>
             </button>
-            <div class="collapse navbar-collapse d-none d-lg-block" id="navbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/MB-GROUPS/html/MB/mountain-hotel/about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/MB-GROUPS/html/MB/mountain-hotel/rooms.html">Rooms</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/MB-GROUPS/html/MB/mountain-hotel/restaurant.html">Our Hotels</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/MB-GROUPS/html/MB/mountain-hotel/room-details.html">Room Details</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/MB-GROUPS/html/MB/mountain-hotel/gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/MB-GROUPS/html/MB/mountain-hotel/contact.html">Contact</a></li>
-                    <li class="nav-item">
-                        <button class="nav-link btn btn-book" onclick="openBookingForm()">Book Your Stay</button>
-                    </li>
-                </ul>
-            </div>
+          <div class="collapse navbar-collapse d-none d-lg-block" id="navbar">
+  <ul class="navbar-nav ms-auto">
+    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+    <!-- About Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        About
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+        <li><a class="dropdown-item" href="/MB-GROUPS/html/MB/mountain-hotel/about.html">About Us</a></li>
+        <li><a class="dropdown-item" href="/MB-GROUPS/html/MB/mountain-hotel/team1.html">Team</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item"><a class="nav-link active" href="/MB-GROUPS/html/MB/mountain-hotel/rooms.html">Rooms</a></li>
+    <li class="nav-item"><a class="nav-link" href="/MB-GROUPS/html/MB/mountain-hotel/restaurant.html">Our Hotels</a></li>
+    <li class="nav-item"><a class="nav-link" href="/MB-GROUPS/html/MB/mountain-hotel/room-details.html">Room Details</a></li>
+    <li class="nav-item"><a class="nav-link" href="/MB-GROUPS/html/MB/mountain-hotel/gallery.html">Gallery</a></li>
+    <li class="nav-item"><a class="nav-link" href="/MB-GROUPS/html/MB/mountain-hotel/contact.html">Contact</a></li>
+    <li class="nav-item">
+      <button class="nav-link btn btn-book" onclick="openBookingForm()">Book Your Stay</button>
+    </li>
+  </ul>
+</div>
+
         </div>
     </nav>
 
@@ -516,54 +557,586 @@
     </div>
 
     <!-- Slider -->
-    <header class="header slider-fade">
-        <div class="owl-carousel owl-theme">
-            <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
-            <div class="item bg-img" data-overlay-dark="5" data-background="/MB-GROUPS/html/MB/mountain-hotel/img/slider/the-image-01.jpg">
-                <div class="v-middle caption">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-lg-7 col-md-12 text-left">
-                                <h4>Premium Hospitality</h4>
-                                <h1>MB Hotel Management Group</h1>
-                                <div class="butn-light mt-30 mb-30"> <a href="/MB-GROUPS/html/MB/mountain-hotel/restaurant.html"><span>Our
-                                            Hotels</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item bg-img" data-overlay-dark="5" data-background="/MB-GROUPS/html/MB/mountain-hotel/img/slider/image-02.jpg">
-                <div class="v-middle caption">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-lg-6 col-md-12 text-left">
-                                <h4>Comfortable Stays</h4>
-                                <h1>Luxury AC Rooms</h1>
-                                <div class="butn-light mt-30 mb-30"> <a href="/MB-GROUPS/html/MB/mountain-hotel/rooms.html"><span>View Rooms</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item bg-img" data-overlay-dark="5" data-background="/MB-GROUPS/html/MB/mountain-hotel/img/slider/image-03.jpg">
-                <div class="v-middle caption">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-lg-6 col-md-12 text-left">
-                                <h4>Multiple Locations</h4>
-                                <h1>Across Gujarat</h1>
-                                <div class="butn-light mt-30 mb-30"> <a href="/MB-GROUPS/html/MB/mountain-hotel/restaurant.html"><span>Our
-                                            Locations</span></a> </div>
-                            </div>
+  <!-- Slider -->
+    <header class="header-new">
+        <div class="bg-img"
+            style="background-image:  radial-gradient(circle at top left, rgba(255, 255, 255, 0.89) 33%, rgba(255, 255, 255, 0) 71%),url(MB-GROUPS/html/MB/mountain-hotel/img/rooms/Home-img-1.jpg); ">
+            <div class="v-middle caption">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h6>MB Hotel</h6>
+                            <h1>Enjoy A Comfortable<br>Hotel Stay</h1>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <!-- Booking Bar -->
+    <div class="booking-bar">
+        <div class="booking-inner">
+            <div class="stat-item">
+                <h2 class="hotels-color">8</h2>
+                <p>HOTELS</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="rooms-color">100+</h2>
+                <p>ROOMS</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="cities-color">5</h2>
+                <p>CITIES</p>
+            </div>
+            <div class="book-now-wrapper">
+                <a href="#" class="btn-book-now" onclick="openBookingForm()">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+
+<style>
+        /* Modern Branches Section */
+        .modern-branches {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modern-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .modern-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .modern-subtitle {
+            font-size: 16px;
+            color: #d4a762;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .modern-title {
+            font-size: 42px;
+            color: #222;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .modern-title:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: #d4a762;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .modern-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .divider-line {
+            width: 60px;
+            height: 1px;
+            background: #ddd;
+            margin: 0 15px;
+        }
+
+        .divider-icon {
+            color: #d4a762;
+            font-size: 18px;
+        }
+
+        .modern-description {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .branch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .branch-tile {
+            position: relative;
+            height: 400px;
+            perspective: 1000px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .branch-tile:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .tile-front,
+        .tile-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .tile-front {
+            transform: rotateY(0deg);
+            background: #fff;
+        }
+
+        .tile-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .branch-tile:hover .tile-front {
+            transform: rotateY(-180deg);
+        }
+
+        .branch-tile:hover .tile-back {
+            transform: rotateY(0deg);
+        }
+
+        .tile-image {
+            height: 220px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+        }
+
+        .tile-content {
+            padding: 20px;
+        }
+
+        .tile-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .meta-rating {
+            color: #ffc107;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .meta-label {
+            background: #d4a762;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .branch-tile h3 {
+            font-size: 22px;
+            color: #222;
+            margin: 0 0 10px 0;
+        }
+
+        .tile-location {
+            display: flex;
+            align-items: center;
+            color: #666;
+            font-size: 11px;
+            margin-bottom: 15px;
+        }
+
+        .tile-location i {
+            margin-right: 8px;
+            color: #d4a762;
+        }
+
+        .tile-price {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .tile-price span {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .tile-price strong {
+            font-size: 20px;
+            color: #d4a762;
+            font-weight: 700;
+        }
+
+        /* Back content styles */
+        .back-content h4 {
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .back-content h4:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: #d4a762;
+            bottom: 0;
+            left: 0;
+        }
+
+        .back-content p {
+            color: #bbb;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .tile-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 25px 0;
+        }
+
+        .tile-features li {
+            color: #ddd;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tile-features i {
+            color: #d4a762;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .tile-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .book-btn {
+            background: #d4a762;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+
+        .book-btn:hover {
+            background: #c29552;
+            transform: translateY(-2px);
+        }
+
+        .call-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .call-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* View more button */
+        .view-more-container {
+            text-align: center;
+        }
+
+        .view-more-btn {
+            background: transparent;
+            color: #d4a762;
+            border: 2px solid #d4a762;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .view-more-btn:hover {
+            background: #d4a762;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .view-more-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .view-more-btn:hover svg {
+            transform: translateX(5px);
+        }
+
+
+        .item img {
+            height: 460px;
+        }
+
+        .header-new {
+            height: 90vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-new .bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header-new .bg-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .header-new .caption {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+            text-align: left;
+        }
+
+        .header-new .caption h6 {
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 80px;
+        }
+
+        .header-new .caption h6:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(to right, rgb(255, 102, 0), rgb(255, 51, 0));
+        }
+
+        .header-new .caption h1 {
+            font-size: 80px;
+            font-weight: 500;
+            line-height: 1.1;
+            color: #000;
+            font-family: "Playfair Display", serif;
+        }
+
+        .booking-bar {
+            background-color: #fff;
+            padding: 0;
+            margin-top: -100px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            width: 65%;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .booking-bar .booking-inner {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .booking-bar .stat-item {
+            text-align: center;
+            padding: 20px;
+            flex: 1;
+            border-right: 1px solid #eee;
+        }
+
+        .booking-bar .stat-item h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .booking-bar .stat-item p {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #666;
+            margin: 5px 0 0 0;
+        }
+
+        .booking-bar .stat-item .hotels-color {
+            color: #12124b;
+        }
+
+        .booking-bar .stat-item .rooms-color {
+            background: linear-gradient(to right, rgb(255, 102, 0), rgb(255, 51, 0));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        .booking-bar .stat-item .cities-color {
+            background: linear-gradient(to right, rgb(255, 102, 0), rgb(255, 51, 0));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .booking-bar .book-now-wrapper {
+            flex-basis: 25%;
+        }
+
+        .booking-bar .btn-book-now {
+            background: linear-gradient(to right, rgb(255, 102, 0), rgb(255, 51, 0));
+
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .booking-bar .btn-book-now:hover {
+            background-color: #000;
+        }
+
+        /* Animation classes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 1200px) {
+            .branch-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .modern-title {
+                font-size: 36px;
+            }
+
+            .modern-subtitle {
+                font-size: 14px;
+                letter-spacing: 2px;
+            }
+
+            .branch-tile {
+                height: 380px;
+            }
+            .header-new .caption h1 {
+                font-size: 40px;
+                font-weight: 500;
+                line-height: 1.1;
+                font-family: "Playfair Display", serif;
+                color: #000;
+
+            }
+            .booking-bar .booking-inner {
+                flex-direction: column;
+                
+            }
+        }
+
+        @media (max-width: 576px) {
+            .modern-title {
+                font-size: 30px;
+            }
+
+            .branch-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tile-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+    
     <!-- About -->
     <section class="about section-padding" data-scroll-index="1">
         <div class="container">

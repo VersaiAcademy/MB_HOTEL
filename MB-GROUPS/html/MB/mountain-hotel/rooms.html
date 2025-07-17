@@ -27,19 +27,47 @@
         </svg>
     </div>
     <!-- Navbar -->
-    <div id="mobileMenu" class="mobile-slider">
-        <button class="close-btn" onclick="closeMobileMenu()">&times;</button>
-        <ul class="mobile-nav">
-            <li><a href="../../../../index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="rooms.html">Rooms</a></li>
-            <li><a href="restaurant.html">Our Hotels</a></li>
-            <li><a href="room-details.html">Room Details</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><button class="btn-book" onclick="openBookingForm()">Book Your Stay</button></li>
-        </ul>
-    </div>
+<div id="mobileMenu" class="mobile-slider">
+  <button class="close-btn" onclick="closeMobileMenu()">&times;</button>
+  <ul class="mobile-nav">
+    <li><a href="index.html">Home</a></li>
+
+    <!-- About with Dropdown -->
+    <li class="has-submenu">
+      <a href="#" onclick="toggleSubMenu(event)">About &#x25BC;</a>
+      <ul class="submenu">
+        <li><a href="/MB-GROUPS/html/MB/mountain-hotel/about.html">About Us</a></li>
+        <li><a href="/MB-GROUPS/html/MB/mountain-hotel/team1.html">Team</a></li>
+      </ul>
+    </li>
+
+    <li><a href="/MB-GROUPS/html/MB/mountain-hotel/rooms.html">Rooms</a></li>
+    <li><a href="/MB-GROUPS/html/MB/mountain-hotel/restaurant.html">Our Hotels</a></li>
+    <li><a href="/MB-GROUPS/html/MB/mountain-hotel/room-details.html">Room Details</a></li>
+    <li><a href="/MB-GROUPS/html/MB/mountain-hotel/gallery.html">Gallery</a></li>
+    <li><a href="/MB-GROUPS/html/MB/mountain-hotel/contact.html">Contact</a></li>
+    <li><button class="btn-book" onclick="openBookingForm()">Book Your Stay</button></li>
+  </ul>
+</div>
+<style>
+    .submenu {
+  display: none;
+  list-style: none;
+  padding-left: 15px;
+}
+
+.has-submenu.active .submenu {
+  display: block;
+}
+
+</style>
+<script>
+  function toggleSubMenu(event) {
+    event.preventDefault();
+    const li = event.target.closest('.has-submenu');
+    li.classList.toggle('active');
+  }
+</script>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
@@ -53,19 +81,30 @@
                 <span class="navbar-toggler-icon"><i class="ti-menu"></i></span>
             </button>
             <div class="collapse navbar-collapse d-none d-lg-block" id="navbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../../../../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="rooms.html">Rooms</a></li>
-                    <li class="nav-item"><a class="nav-link" href="restaurant.html">Our Hotels</a></li>
-                    <li class="nav-item"><a class="nav-link" href="room-details.html">Room Details</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item">
-                        <button class="nav-link btn btn-book" onclick="openBookingForm()">Book Your Stay</button>
-                    </li>
-                </ul>
-            </div>
+  <ul class="navbar-nav ms-auto">
+    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+    <!-- About Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        About
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+        <li><a class="dropdown-item" href="/MB-GROUPS/html/MB/mountain-hotel/about.html">About Us</a></li>
+        <li><a class="dropdown-item" href="/MB-GROUPS/html/MB/mountain-hotel/team1.html">Team</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item"><a class="nav-link active" href="/MB-GROUPS/html/MB/mountain-hotel/rooms.html">Rooms</a></li>
+    <li class="nav-item"><a class="nav-link" href="/MB-GROUPS/html/MB/mountain-hotel/restaurant.html">Our Hotels</a></li>
+    <li class="nav-item"><a class="nav-link" href="/MB-GROUPS/html/MB/mountain-hotel/room-details.html">Room Details</a></li>
+    <li class="nav-item"><a class="nav-link" href="/MB-GROUPS/html/MB/mountain-hotel/gallery.html">Gallery</a></li>
+    <li class="nav-item"><a class="nav-link" href="/MB-GROUPS/html/MB/mountain-hotel/contact.html">Contact</a></li>
+    <li class="nav-item">
+      <button class="nav-link btn btn-book" onclick="openBookingForm()">Book Your Stay</button>
+    </li>
+  </ul>
+</div>
         </div>
     </nav>
     <div id="bookingModal" class="modal-overlay">
