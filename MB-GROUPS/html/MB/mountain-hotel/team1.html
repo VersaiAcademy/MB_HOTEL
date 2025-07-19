@@ -107,6 +107,7 @@
         .section-title {
             text-align: center;
             margin-bottom: 60px;
+            margin-left: 270px;
         }
 
         .section-title h2 {
@@ -116,6 +117,7 @@
             display: inline-block;
             padding-bottom: 15px;
             font-weight: 700;
+          
         }
 
         .section-title h2:after {
@@ -127,6 +129,7 @@
             width: 80px;
             height: 3px;
             background: #b89d5a;
+            
         }
 
         .section-title p {
@@ -400,58 +403,65 @@
                         </div>
                     </div>
                     <!-- Booking From -->
-                    <div class="col-lg-5 offset-lg-2 col-md-12">
+                     <div class="col-lg-5 offset-lg-2 col-md-12">
                         <div class="booking-box">
                             <div class="head-box text-center">
                                 <h4>Hotel Booking Form</h4>
                             </div>
                             <div class="booking-inner clearfix">
-                                <form class="booking-form" id="bookingForm">
-                                    <h2>Book Your Stay</h2>
-
-                                    <label>Name *</label>
-                                    <input type="text" placeholder="Enter Your Full Name" required>
-
-                                    <label>Email Address *</label>
-                                    <input type="email" placeholder="name@gmail.com" required>
-
-                                    <label>Phone *</label>
-                                    <input type="tel" placeholder="9876543210" maxlength="10" required>
-
-                                    <label>Check-In Date *</label>
-                                    <input type="date" required>
-
-                                    <label>Check-Out Date *</label>
-                                    <input type="date" required>
-
-                                    <label>Number of Adults *</label>
-                                    <input type="number" min="1" placeholder="e.g. 2" required>
-
-                                    <label>Number of Kids *</label>
-                                    <input type="number" min="0" placeholder="e.g. 1" required>
-
-                                    <label>Room Preference *</label>
-                                    <select required>
-                                        <option value="">Select Room</option>
-                                        <option>Deluxe Room</option>
-                                        <option>Super Deluxe Room</option>
-                                    </select>
-
-                                    <label>No. of Rooms *</label>
-                                    <input type="number" min="1" required>
-
-                                    <label>Select Hotel *</label>
-                                    <select required>
-                                        <option value="">Choose Hotel</option>
-                                        <option>Hotel MB Rooms</option>
-                                        <option>hotel Mountain</option>
-                                        <option>Hotel My Stay</option>
-                                        <option>Hotel A-1</option>
-                                        <option>Hotel Millennium</option>
-                                        <option>Hotel Mount Villa</option>
-                                    </select>
-
-                                    <button type="submit">Submit Booking</button>
+                                <form action="rooms.html" class="form1 clearfix">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="input1_wrapper">
+                                                <label>Check in</label>
+                                                <div class="input1_inner">
+                                                    <input type="text" class="form-control input datepicker"
+                                                        placeholder="Check in">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="input1_wrapper">
+                                                <label>Check out</label>
+                                                <div class="input1_inner">
+                                                    <input type="text" class="form-control input datepicker"
+                                                        placeholder="Check out">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="select1_wrapper">
+                                                <label>Adults</label>
+                                                <div class="select1_inner">
+                                                    <select class="select2 select" style="width: 100%">
+                                                        <option value="0">Adults</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="select1_wrapper">
+                                                <label>Children</label>
+                                                <div class="select1_inner">
+                                                    <select class="select2 select" style="width: 100%">
+                                                        <option value="0">Children</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn-form1-submit mt-15">Check
+                                                Availability</button>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -488,7 +498,7 @@
                                 <li><a href="../../../../index.html">Home</a></li>
                                 <li><a href="rooms.html">Rooms & Suites</a></li>
                                 <li><a href="restaurant.html">Restaurant</a></li>
-                                <li><a href="spa-wellness.html">Spa & Wellness</a></li>
+                                <!-- <li><a href="spa-wellness.html">Spa & Wellness</a></li> -->
                                 <li><a href="about.html">About Hotel</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
